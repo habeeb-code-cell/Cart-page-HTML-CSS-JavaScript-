@@ -138,14 +138,14 @@ span{
      background-color: none;
 }
     
-}
+
 #nav-links a:hover,
 #nav-links .active {
     background-color: rgba(255, 255, 255, 0.2);
 /* } */
 
 
-/* @media screen and (max-width: 768px) { */
+@media screen and (max-width: 768px) {
     /* .nav-links { */
         display: none;
         flex-direction: column;
@@ -158,24 +158,10 @@ span{
         text-align: center;
     }
 
-    /* .nav-links.show { */
+    .nav-links.show {
         display: flex;
-    }
+    }}
 
     /* .nav-links li { */
-        padding: 10px 0;
-    }
-
-}
-/* JavaScript (script.js) */
-js
-Copy
-Edit
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-    });
-/* }); */
+        /*padding: 10px 0;
+    /*
