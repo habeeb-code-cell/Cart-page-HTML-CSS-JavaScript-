@@ -9,7 +9,7 @@
 <body>
     <h1>Hello</h1>
     <div class="register-container">
-        <form action="">
+        <form id="myform">
             <div class="form-group">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name">
@@ -34,35 +34,20 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password">
             </div>
-            <input type="submit" value="Submit Form">
+            <label for="PartTime">Part-Time </label>
+            <input type="radio" id="PartTime" name="jobType"> <br>       
+            
+            <label for="fullTime">Full-Time </label>
+            <input type="radio" id="fullTime" name="jobType">
+            
+
+            <input type="submit" value="Submit" id="submit">            
         </form>
     </div>
         
+    <script src="script.js"></script>
+
 </body>
-    <script>
-            let form = document.querySelector("form");
-            form.addEventListener("submit", function (event) {
-                event.preventDefault(); 
-                let firstName = document.querySelector("#first-name");
-                let lastName = document.querySelector("#last-name");
-                let Username = document.querySelector("#username");
-                let email = document.querySelector("#email");
-                let birthDate = document.querySelector("#dob");
-                let password = document.querySelector("#password");
-                
-    
-                let h1 = document.querySelector("h1");
-                h1.innerHTML = `Welcome ${firstName.value} ${lastName.value}!`;
-    
-                let content = document.querySelector("form");
-                content.innerHTML = `
-                    <p>Your name is: ${firstName.value} ${lastName.value}</p>
-                    <p>Your email is: ${email.value}</p>
-                    <p>Your date of birth is: ${birthDate.value}</p>
-                    <p style="color: red;">YOU HAVE BEEN REGISTERED!</p>`;
-            });
-        </script>
-    </script>
    
 </html>
 
